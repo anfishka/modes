@@ -34,8 +34,8 @@ else:
     warm_weather = 0.30
     cold_weather = 0.23
     if city_fuel_consumption > 0 and fuel_tank_capacity > 0:
-        res_warm_weather = (fuel_tank_capacity / city_fuel_consumption) * 100 * (1 - warm_weather)
-        res_cold_weather = (fuel_tank_capacity / city_fuel_consumption) * 100 * (1 - cold_weather)
+        res_warm_weather = (fuel_tank_capacity / city_fuel_consumption) * 100 / (1 - warm_weather)
+        res_cold_weather = (fuel_tank_capacity / city_fuel_consumption) * 100 / (1 - cold_weather)
         print('\033[0;33mПо трассе в теплую погоду Вы проедите: ' + str(res_warm_weather) + ' километров')
         print('По трасее в холодную погоду Вы проедите: ' + str(res_cold_weather) + ' километров')
     else:
